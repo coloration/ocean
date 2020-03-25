@@ -1,0 +1,19 @@
+{
+  "name": "@coloration/ocean",
+  "version": "0.0.1",
+  "main": "lib/index.js",
+  "typings": "./types",
+  "repository": "git@github.com:coloration/ocean.git",
+  "author": "WangBinyu <406279919@qq.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@coloration/kit": "^1.0.1",
+    "react": "^16.13.1"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.25",
+    "typescript": "^3.8.3",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  }
+}
