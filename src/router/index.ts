@@ -1,10 +1,10 @@
 import Vue from 'vue'
-import VueRouter from 'vue-router'
+import VueRouter, { RouteConfig } from 'vue-router'
 import Home from '../views/Home.vue'
 
 Vue.use(VueRouter)
 
-export const routes = [
+  const routes: Array<RouteConfig> = [
   {
     path: '/',
     name: 'Home',
@@ -20,11 +20,10 @@ export const routes = [
   }
 ]
 
+const router = new VueRouter({
+  mode: 'history',
+  base: process.env.BASE_URL,
+  routes
+})
 
-export function genRouter (rootPath) {
-  return new VueRouter({
-    mode: 'history',
-    base: rootPath,
-    routes
-  })
-}
+export default router

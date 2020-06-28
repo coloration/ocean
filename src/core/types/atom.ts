@@ -1,5 +1,8 @@
 export interface IAction {
+  /** action 得到的 response 缓存多久 */
   cache: number  
+
+  /** action 执行后得到的结果 */
   response: any
 }
 
@@ -8,31 +11,45 @@ export interface IStream {
 }
 
 
-
 export enum VarialType {
   string = 'string',
   raw = 'raw',
   template = 'template',
 }
 
+export type VariailObserver = (varial: IVarial) => any
+
+/** 变量: 观察者, 由 Trigger 触发通知, 通知 Render */
 export interface IVarial {
+
   type: VarialType,
 
-  format: (input: string) => IVarial
-  deps: IStream[]
+  obs: VariailObserver[]
 
-  actions: IAction[]
+  register: (ob: VariailObserver) => void 
 
-  dispatch: () => Promise<IVarial>
+  remove: (ob: VariailObserver) => void
+
+  notify: () => Promise<IVarial>
 }
 
 export interface IConstVarial extends IVarial {}
 
-export interface IReactiveVarial extends IVarial {}
+export interface IReactiveVarial extends IVarial {
+
+  /** 缓存结果 */
+  response: IVarial
+  /** 缓存时间 */
+  responseCache: number
+}
 
 
 
+export interface ITrigger {
+  varials: IVarial[]
 
+  trigger: () => void
+}
 
 
 export enum EnvironmentType {
