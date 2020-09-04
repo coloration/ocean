@@ -822,6 +822,11 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
+"@coloration/asker@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@coloration/asker/-/asker-1.0.0.tgz#9bb3dd4485a1263322ac99fae3999df28cacc057"
+  integrity sha512-Q/xyo/5I7eGt9OoNo7VbKoIpsTFTP7rbAUyNHPiRg5Wgi3FHq4S6QymgSdTXExLIoq0mhDV2ELu1IzO++RdpCQ==
+
 "@hapi/address@2.x.x":
   version "2.1.4"
   resolved "http://registry.npm.yoyi.com.cn/@hapi%2faddress/-/address-2.1.4.tgz#5d67ed43f3fd41a69d4b9ff7b56e7c0d1d0a81e5"

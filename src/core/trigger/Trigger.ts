@@ -1,4 +1,4 @@
-import { IVarial, ITrigger } from '../../types'
+import { IVarial, ITrigger } from '../types'
 
 export class Trigger implements ITrigger {
 
